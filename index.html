@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloc de notas NTS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/nts-logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="window">
+    <header class="title-bar">
+      <div class="title-copy">
+        <img class="title-logo" src="assets/nts-logo.svg" alt="Logo NTS">
+        <span id="windowTitle">Sin titulo - Bloc de notas NTS</span>
+      </div>
+
+      <div class="window-controls" aria-hidden="true">
+        <button class="window-control" type="button">_</button>
+        <button class="window-control" type="button">[]</button>
+        <button class="window-control close" type="button">X</button>
+      </div>
+    </header>
+
+    <nav class="menu-bar" aria-label="Menu principal">
+      <div class="menu" data-menu-root>
+        <button class="menu-trigger" type="button" data-menu="archivo">Archivo</button>
+        <div class="menu-panel" id="menu-archivo" role="menu">
+          <button class="menu-action" type="button" data-action="new">Nuevo<span>Ctrl+N</span></button>
+          <button class="menu-action" type="button" data-action="open">Abrir...<span>Ctrl+O</span></button>
+          <button class="menu-action" type="button" data-action="save">Guardar<span>Ctrl+S</span></button>
+        </div>
+      </div>
+
+      <div class="menu" data-menu-root>
+        <button class="menu-trigger" type="button" data-menu="editar">Editar</button>
+        <div class="menu-panel" id="menu-editar" role="menu">
+          <button class="menu-action" type="button" data-action="undo">Deshacer<span>Ctrl+Z</span></button>
+          <button class="menu-action" type="button" data-action="cut">Cortar<span>Ctrl+X</span></button>
+          <button class="menu-action" type="button" data-action="copy">Copiar<span>Ctrl+C</span></button>
+          <button class="menu-action" type="button" data-action="paste">Pegar<span>Ctrl+V</span></button>
+          <button class="menu-action" type="button" data-action="select-all">Seleccionar todo<span>Ctrl+A</span></button>
+        </div>
+      </div>
+
+      <div class="menu" data-menu-root>
+        <button class="menu-trigger" type="button" data-menu="formato">Formato</button>
+        <div class="menu-panel" id="menu-formato" role="menu">
+          <button class="menu-action checkbox-action" type="button" data-action="toggle-wrap">
+            <span id="wrapCheckmark">v</span>
+            Ajuste de linea
+          </button>
+          <div class="menu-note">La fuente y el tamano se aplican a la seleccion desde la barra superior.</div>
+        </div>
+      </div>
+
+      <div class="menu" data-menu-root>
+        <button class="menu-trigger" type="button" data-menu="ver">Ver</button>
+        <div class="menu-panel" id="menu-ver" role="menu">
+          <button class="menu-action disabled" type="button" disabled>Zoom</button>
+          <button class="menu-action disabled" type="button" disabled>Barra de estado</button>
+        </div>
+      </div>
+
+      <div class="menu" data-menu-root>
+        <button class="menu-trigger" type="button" data-menu="ayuda">Ayuda</button>
+        <div class="menu-panel" id="menu-ayuda" role="menu">
+          <button class="menu-action" type="button" data-action="about">Acerca de NTS</button>
+        </div>
+      </div>
+
+      <div class="menu-inline-controls" aria-label="Formato de seleccion">
+        <label class="menu-inline-control" for="fontFamily">
+          <span>Fuente</span>
+          <select id="fontFamily" class="menu-select">
+            <option value="Consolas" selected>Consolas</option>
+            <option value="'Cascadia Mono', monospace">Cascadia Mono</option>
+            <option value="'Segoe UI', sans-serif">Segoe UI</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="'Times New Roman'">Times New Roman</option>
+          </select>
+        </label>
+
+        <label class="menu-inline-control" for="fontSize">
+          <span>Tamano</span>
+          <select id="fontSize" class="menu-select menu-size-select">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="11" selected>11</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="28">28</option>
+            <option value="32">32</option>
+          </select>
+        </label>
+      </div>
+    </nav>
+
+    <main class="editor-shell">
+      <div class="editor-surface">
+        <div
+          id="editor"
+          class="editor"
+          contenteditable="true"
+          spellcheck="false"
+          role="textbox"
+          aria-multiline="true"
+          data-placeholder="Escribi tu texto aca..."
+        ></div>
+      </div>
+    </main>
+
+    <footer class="status-bar">
+      <span id="documentName">Sin titulo.txt</span>
+      <span id="documentStats">0 caracteres, 1 linea</span>
+      <span id="cursorPosition">Ln 1, Col 1</span>
+    </footer>
+  </div>
+
+  <input id="fileInput" type="file" accept=".txt,.html,.htm,text/plain,text/html" hidden>
+
+  <script src="script.js"></script>
+</body>
+</html>

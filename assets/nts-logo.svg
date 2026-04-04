@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Logo NTS</title>
+  <desc id="desc">Icono estilo bloc de notas con las letras NTS</desc>
+  <defs>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffef8" />
+      <stop offset="100%" stop-color="#f3f6fb" />
+    </linearGradient>
+    <linearGradient id="tab" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f6cbd" />
+      <stop offset="100%" stop-color="#1890d8" />
+    </linearGradient>
+  </defs>
+
+  <rect x="48" y="28" width="160" height="200" rx="18" fill="url(#paper)" stroke="#b6c2d2" stroke-width="6"/>
+  <path d="M176 28h14c10 0 18 8 18 18v14l-32-32z" fill="#dfe8f3"/>
+  <rect x="48" y="28" width="160" height="34" rx="18" fill="url(#tab)"/>
+  <rect x="48" y="44" width="160" height="18" fill="url(#tab)"/>
+
+  <g fill="#ffffff">
+    <circle cx="80" cy="45" r="5"/>
+    <circle cx="104" cy="45" r="5"/>
+    <circle cx="128" cy="45" r="5"/>
+    <circle cx="152" cy="45" r="5"/>
+    <circle cx="176" cy="45" r="5"/>
+  </g>
+
+  <g stroke="#d4dbe6" stroke-width="4" stroke-linecap="round">
+    <line x1="74" y1="96" x2="182" y2="96"/>
+    <line x1="74" y1="118" x2="182" y2="118"/>
+    <line x1="74" y1="140" x2="182" y2="140"/>
+    <line x1="74" y1="162" x2="182" y2="162"/>
+  </g>
+
+  <rect x="66" y="170" width="124" height="36" rx="10" fill="#183153"/>
+  <text x="128" y="194" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">NTS</text>
+</svg>

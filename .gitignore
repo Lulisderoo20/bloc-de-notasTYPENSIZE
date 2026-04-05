@@ -1,0 +1,36 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+
+# Local env / secrets
+.env
+.env.*
+
+# Node / web tooling
+node_modules/
+dist/
+build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# .NET / Visual Studio
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.cache
+*.pdb
+TestResults/
+
+# Local dotnet CLI home created for sandbox-safe commands
+.dotnet-home/
+
+# Publish output
+publish/
+artifacts/
